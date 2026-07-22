@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+
+  "name": "B站批量收藏助手",
+
+  "version": "1.0.0",
+
+  "description": "批量将BV号或B站视频链接加入B站收藏夹",
+
+  "permissions": [
+    "storage",
+    "cookies",
+    "downloads"
+  ],
+
+  "host_permissions": [
+    "https://*.bilibili.com/*",
+    "https://api.bilibili.com/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "B站批量收藏助手"
+  },
+
+  "background": {
+    "service_worker": "js/worker.js",
+    "type": "module"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+
+}

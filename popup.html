@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>
+B站批量收藏助手
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h2>
+📚 B站批量收藏助手
+</h2>
+
+
+
+<div class="box">
+
+
+<label>
+导入BV列表
+</label>
+
+
+<div id="dropZone">
+
+
+拖入TXT文件
+
+<br>
+
+或点击选择
+
+
+<input
+type="file"
+id="fileInput"
+accept=".txt">
+
+
+</div>
+
+
+
+<textarea
+id="bvList"
+placeholder="
+
+输入BV号或B站链接
+
+例如:
+
+BV1xx411c7mD
+
+https://www.bilibili.com/video/BV1xx411c7mD
+
+">
+</textarea>
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<label>
+目标收藏夹
+</label>
+
+
+<select id="favList">
+
+<option>
+请刷新收藏夹
+</option>
+
+</select>
+
+
+<button id="refreshFav">
+刷新收藏夹
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<label>
+请求间隔（秒）
+</label>
+
+
+<input
+id="delay"
+type="number"
+value="3"
+min="1"
+max="30">
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<button id="start">
+▶ 开始收藏
+</button>
+
+
+<button id="resume">
+↻ 恢复任务
+</button>
+
+
+<button id="pause">
+⏸ 暂停
+</button>
+
+
+<button id="clear">
+🗑 清空任务
+</button>
+
+
+
+<button id="export">
+📄 导出日志
+</button>
+
+
+<button id="theme">
+🌙 深色模式
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<p id="status">
+等待开始
+</p>
+
+
+
+<p id="count">
+
+成功:0
+
+跳过:0
+
+失败:0
+
+</p>
+
+
+
+<div class="progress">
+
+
+<div id="progressBar">
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<textarea
+id="log"
+readonly
+placeholder="运行日志">
+</textarea>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="popup.js"></script>
+
+
+</body>
+
+</html>
